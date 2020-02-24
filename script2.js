@@ -34,13 +34,29 @@ function GeneratePasswordvalue(random){
     }
 }
 
+function GenerateCompletePassword(random){
+    for (const value of iterator) {
+    
+       
+      
+  //  for (let i = 0; i < 10; i++) {
+    
+    const value = random[Math.floor(Math.random() * random.length)];
+    console.log(value);
+    password.push(value);
+   
+// }
+
+    }
+}
 
 //push function value output to new array, generate 10 random characters and spit them out
 
 let numbers = confirm ("Welcome to the password Generator. Will your password contain numbers?");
 let specialCharacters = confirm ("Will your password contain special characters?")
 let letters = confirm ("will your password contain letters?")
-
+let howManyChars = prompt ("how many characters will your password contain?")
+if (howManyChars !== var)
 if (numbers  === true) {
 GeneratePassword(number);
 //need to find out how to push specialchars to new array
@@ -66,3 +82,4 @@ if (specialCharacters === true) {
 else { 
 alert ("no special characters to generate");
 }
+
