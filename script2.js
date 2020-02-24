@@ -37,3 +37,32 @@ function GeneratePasswordvalue(random){
 
 //push function value output to new array, generate 10 random characters and spit them out
 
+let numbers = confirm ("Welcome to the password Generator. Will your password contain numbers?");
+let specialCharacters = confirm ("Will your password contain special characters?")
+let letters = confirm ("will your password contain letters?")
+
+if (numbers  === true) {
+GeneratePassword(number);
+//need to find out how to push specialchars to new array
+}
+else {  
+alert ("no numbers to generate") ;
+}
+
+if (letters === true) {
+    GeneratePasswordvalue(lowercase);
+     
+    
+    //need to find out how to push specialchars to new array
+}
+else {
+    alert ("no letters to generate");
+}
+
+if (specialCharacters === true) {
+    GeneratePasswordvalue(specialChars)
+    //need to find out how to push specialchars to new array
+}
+else { 
+alert ("no special characters to generate");
+}
