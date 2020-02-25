@@ -3,6 +3,7 @@ const specialChars = ["!","@","#","$","%","^","&","*","(",")","_","-","+","=","[
 const iterator = lowercase.values(); 
 let number = ["0","1","2","3","4","5","6","7","8","9"];
 let password = []
+let mixedcompletepass = []
 //for randomizing locations in array
 function GeneratePassword(random){
     for (let i = 0; i < 10; i++) {
@@ -50,13 +51,18 @@ function GenerateCompletePassword(random){
     }
 }
 
+
+function FullPassword(mixed){
+    var ranpass = password.slice(0,howManyChars);
+    console.log(ranpass);
+}
 //push function value output to new array, generate 10 random characters and spit them out
 
 let numbers = confirm ("Welcome to the password Generator. Will your password contain numbers?");
 let specialCharacters = confirm ("Will your password contain special characters?")
 let letters = confirm ("will your password contain letters?")
 let howManyChars = prompt ("how many characters will your password contain?")
-if (howManyChars !== var)
+//if (howManyChars !== var)
 if (numbers  === true) {
 GeneratePassword(number);
 //need to find out how to push specialchars to new array
@@ -83,3 +89,4 @@ else {
 alert ("no special characters to generate");
 }
 
+FullPassword(password)
