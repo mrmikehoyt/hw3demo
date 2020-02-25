@@ -4,6 +4,9 @@ const iterator = lowercase.values();
 let number = ["0","1","2","3","4","5","6","7","8","9"];
 let password = []
 let mixedcompletepass = []
+let password2 = []
+let password6 = []
+const password4 = password.values();
 //for randomizing locations in array
 function GeneratePassword(random){
     for (let i = 0; i < 10; i++) {
@@ -13,7 +16,7 @@ function GeneratePassword(random){
         let num = Math.floor(Math.random() * 10) + 1
 
         // Display in console
-        console.log(num)
+       // console.log(num)
         password.push(num);
 
     }
@@ -27,7 +30,7 @@ function GeneratePasswordvalue(random){
   //  for (let i = 0; i < 10; i++) {
     
     const value = random[Math.floor(Math.random() * random.length)];
-    console.log(value);
+    //console.log(value);
     password.push(value);
    
 // }
@@ -43,7 +46,7 @@ function GenerateCompletePassword(random){
   //  for (let i = 0; i < 10; i++) {
     
     const value = random[Math.floor(Math.random() * random.length)];
-    console.log(value);
+    //console.log(value);
     password.push(value);
    
 // }
@@ -51,17 +54,32 @@ function GenerateCompletePassword(random){
     }
 }
 
-
-function FullPassword(mixed){
-    var ranpass = password.slice(0,howManyChars);
-    console.log(ranpass);
+function createArray(random){
+    for (const value of password4) {
+        const value = random[Math.floor(Math.random() * random.length)];
+        //console.log(value);    
+        password2.push(value);
+        var blahblah = password2.slice(0, howManyChars)
+        console.log (blahblah);
+        
+    }
 }
+
+function splice(random){
+     password2.slice(0, 7);
+}
+
+//function FullPassword(mixed){
+//    var ranpass = password2.slice(0,howManyChars);
+    //console.log(ranpass);
+//}
 //push function value output to new array, generate 10 random characters and spit them out
 
 let numbers = confirm ("Welcome to the password Generator. Will your password contain numbers?");
 let specialCharacters = confirm ("Will your password contain special characters?")
 let letters = confirm ("will your password contain letters?")
 let howManyChars = prompt ("how many characters will your password contain?")
+let ready = confirm ("ready to generate")
 //if (howManyChars !== var)
 if (numbers  === true) {
 GeneratePassword(number);
@@ -89,4 +107,12 @@ else {
 alert ("no special characters to generate");
 }
 
-FullPassword(password)
+
+
+if (ready === true){
+    createArray(password)
+    splice(password2)
+}
+else {
+    alert ("theres nothing to do");
+}
