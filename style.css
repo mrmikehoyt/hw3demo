@@ -55,6 +55,7 @@ html {
   
   .card-body {
     min-height: 100px;
+    text-align: center;
   }
   
   .card-footer {
