@@ -5,38 +5,38 @@ let generateBtn = document.querySelector("#generate");
 function writePassword() {
   //let password = generatePassword();
   //let passwordText = document.querySelector("#password");
-//alert ("hello");
   //passwordText.value = password;
   const lowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   const uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
   const specialChars = ["!","@","#","$","%","^","&","*","(",")","_","-","+","=","[","{","]","]",",","|",",","/","?",">","<"];
-  const iterator2 = uppercase.values();
-  const iterator = lowercase.values(); 
+  const arrayvalueuppercase = uppercase.values();
+  const arrayvaluelowercase = lowercase.values(); 
+  const arrayvalueSpecialCharacters = specialChars.values();
   let number = ["0","1","2","3","4","5","6","7","8","9"];
-  let password = []
-  let mixedcompletepass = []
-  let password2 = []
-  let password6 = []
-  let password8 = []
-  const password4 = password.values();
+  let mixedPasswordArray = []
+ // let mixedcompletepass = []
+  let mixedPassAllCharTypes = []
+  // let password6 = []
+  // let password8 = []
+  const password4 = mixedPasswordArray.values();
   
-  //for randomizing locations in array
+  //for randomizing numbers in array
   function GeneratePassword(random){
       for (let i = 0; i < 10; i++) {
           // Generate a random number between 1 and 10
           // Math.floor will round down, meaning we would get a number
           // between 0 and 9, so we'll always add 1 to bump it up.
-          let num = Math.floor(Math.random() * 10) + 1
+          let num = Math.floor(Math.random() * 8) + 1
   
           // Display in console
          // console.log(num)
-          password.push(num);
+          mixedPasswordArray.push(num);
   
       }
   }
-  //for randoming values in lowercase array
-  function GeneratePasswordvalue(random){
-      for (const value of iterator) {
+  //for randomizing lowercase letters in array
+  function GenerateLowercaseletters(random){
+      for (const value of arrayvaluelowercase) {
       
          
         
@@ -44,7 +44,24 @@ function writePassword() {
       
       const value = random[Math.floor(Math.random() * random.length)];
       //console.log(value);
-      password.push(value);
+      mixedPasswordArray.push(value);
+     
+  // }
+  
+      }
+  }
+
+    //for randoming specialcharacters in array
+    function GenerateSpecialCharacters(random){
+      for (const value of arrayvalueSpecialCharacters) {
+      
+         
+        
+    //  for (let i = 0; i < 10; i++) {
+      
+      const value = random[Math.floor(Math.random() * random.length)];
+      //console.log(value);
+      mixedPasswordArray.push(value);
      
   // }
   
@@ -52,7 +69,7 @@ function writePassword() {
   }
   
   function GenerateUppercaseletters(random){
-      for (const value of iterator2) {
+      for (const value of arrayvalueuppercase) {
       
          
         
@@ -60,36 +77,23 @@ function writePassword() {
       
       const value = random[Math.floor(Math.random() * random.length)];
       //console.log(value);
-      password.push(value);
+      mixedPasswordArray.push(value);
      
   // }
   
       }
   }
   
-  function GenerateCompletePassword(random){
-      for (const value of iterator) {
-      
-         
-        
-    //  for (let i = 0; i < 10; i++) {
-      
-      const value = random[Math.floor(Math.random() * random.length)];
-      console.log(value);
-      password.push(value);
-     
-  // }
-  
-      }
-  }
+
   
   function createArray(random){
    
       for (const value of password4) {
           const value = random[Math.floor(Math.random() * random.length)];
           //console.log(value);    
-          password2.push(value);
-          window.blahblah = password2.slice(0, howManyChars)
+          mixedPassAllCharTypes.push(value);
+          window.blahblah = mixedPassAllCharTypes.slice(0, howManyChars)
+          
           
          //  console.log (blahblah);
         
@@ -112,6 +116,8 @@ function writePassword() {
   let uppercaseletters = confirm ("will your password contain uppercase letters?")
   let howManyChars = prompt ("how many characters will your password contain?")
   let ready = confirm ("ready to generate")
+  
+  
   //if (howManyChars !== var)
   if (numbers  === true) {
   GeneratePassword(number);
@@ -122,7 +128,7 @@ function writePassword() {
   }
   
   if (letters === true) {
-      GeneratePasswordvalue(lowercase);
+      GenerateLowercaseletters(lowercase);
        
       
       //need to find out how to push specialchars to new array
@@ -142,7 +148,7 @@ function writePassword() {
   }
   
   if (specialCharacters === true) {
-      GeneratePasswordvalue(specialChars)
+      GenerateSpecialCharacters(specialChars)
       //need to find out how to push specialchars to new array
   }
   else { 
@@ -152,7 +158,7 @@ function writePassword() {
   
   
   if (ready === true){
-      createArray(password)
+      createArray(mixedPasswordArray)
       let message = document.getElementById("display")
       message.innerText = blahblah;
   }
