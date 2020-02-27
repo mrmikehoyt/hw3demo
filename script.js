@@ -17,7 +17,9 @@ function writePassword() {
   let mixedcompletepass = []
   let password2 = []
   let password6 = []
+  let password8 = []
   const password4 = password.values();
+  
   //for randomizing locations in array
   function GeneratePassword(random){
       for (let i = 0; i < 10; i++) {
@@ -73,7 +75,7 @@ function writePassword() {
     //  for (let i = 0; i < 10; i++) {
       
       const value = random[Math.floor(Math.random() * random.length)];
-      //console.log(value);
+      console.log(value);
       password.push(value);
      
   // }
@@ -82,13 +84,15 @@ function writePassword() {
   }
   
   function createArray(random){
+   
       for (const value of password4) {
           const value = random[Math.floor(Math.random() * random.length)];
           //console.log(value);    
           password2.push(value);
-          var blahblah = password2.slice(0, howManyChars)
-          console.log (blahblah);
+          window.blahblah = password2.slice(0, howManyChars)
           
+         //  console.log (blahblah);
+        
       }
   }
   
@@ -149,11 +153,15 @@ function writePassword() {
   
   if (ready === true){
       createArray(password)
+      let message = document.getElementById("display")
+      message.innerText = blahblah;
   }
   else {
       alert ("theres nothing to do");
   }
 }
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
