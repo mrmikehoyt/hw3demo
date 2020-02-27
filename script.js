@@ -115,6 +115,10 @@ function writePassword() {
   let letters = confirm ("will your password contain lowercase letters?")
   let uppercaseletters = confirm ("will your password contain uppercase letters?")
   let howManyChars = prompt ("how many characters will your password contain?")
+  while (howManyChars > 128 || howManyChars <8) {
+    howManyChars =  prompt ("Please enter a number greater than 8 and less than 128.")
+ }
+ 
   let ready = confirm ("ready to generate")
   
   
@@ -155,6 +159,7 @@ function writePassword() {
   alert ("no special characters to generate");
   }
   
+
   
   
   if (ready === true){
