@@ -27,4 +27,4 @@ style.css
 * Once you click on ready to generate, your password will be displayed. If you answered no to any of the questions along the way, you will receive an alert related to the questions you answered no to. 
 
 
-![password generator program](homeworkss2.jpg)
+![password generator program](https://github.com/mrmikehoyt/hw3demo/blob/master/homeworkss2.JPG)
