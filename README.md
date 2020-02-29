@@ -6,8 +6,8 @@ index.html
 script.js
 style.css
 
-* please note script2.js is not needed. It was created for troubleshooting purposes before implementing the script directly into the website
-* to increase or decrease the percentage of times a number is generated you will have to change the variable 16 to a higher or lower number
+* please note script2.js is not needed. It was created for troubleshooting purposes before implementing the script directly into the website. The jpg files are also screenshots and are only needed for this file.
+* to increase or decrease the percentage of times a number is generated you will have to change the variable 32 to a higher or lower number
 * the higher the number, the greater the chances, the lower the number, the odds are lower a number will be generated. This is due to the 
 * fact there are less numbers than letters and special characters
 
