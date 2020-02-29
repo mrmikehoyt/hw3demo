@@ -11,7 +11,7 @@ style.css
 * the higher the number, the greater the chances, the lower the number, the odds are lower a number will be generated. This is due to the 
 * fact there are less numbers than letters and special characters
 
-![value that needs to be changed](homeworkss1.jpg)
+![value that needs to be changed](https://github.com/mrmikehoyt/hw3demo/blob/master/homeworkss1.JPG)
 
 
 
