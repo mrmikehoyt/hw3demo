@@ -22,7 +22,7 @@ function writePassword() {
   
   //for randomizing numbers in array
   function GeneratePassword(random){
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 16; i++) {
           // Generate a random number between 1 and 10
           // Math.floor will round down, meaning we would get a number
           // between 0 and 9, so we'll always add 1 to bump it up.
@@ -85,21 +85,22 @@ function writePassword() {
   }
   
 
-  
   function createArray(random){
    
       for (const value of password4) {
           const value = random[Math.floor(Math.random() * random.length)];
           //console.log(value);    
           mixedPassAllCharTypes.push(value);
-          window.blahblah = mixedPassAllCharTypes.slice(0, howManyChars)
-          
+          window.passwithsemicolon = mixedPassAllCharTypes.slice(0, howManyChars)
+
           
          //  console.log (blahblah);
         
       }
   }
   
+ 
+ 
   //function splice(random){
   //     password2.slice(0, 7);
   //}
@@ -148,7 +149,7 @@ function writePassword() {
       //need to find out how to push specialchars to new array
   }
   else {
-      alert ("no lowercase letters to generate");
+      alert ("no uppercase letters to generate");
   }
   
   if (specialCharacters === true) {
@@ -161,12 +162,13 @@ function writePassword() {
   
 
   
-  
   if (ready === true){
       createArray(mixedPasswordArray)
+      let finalpass = passwithsemicolon.join('')
       let message = document.getElementById("display")
-      message.innerText = blahblah;
-  }
+      message.innerText = finalpass;
+      
+  } 
   else {
       alert ("theres nothing to do");
   }
@@ -176,3 +178,6 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+//need to convert array to string
